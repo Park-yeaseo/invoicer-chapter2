@@ -13,4 +13,4 @@ RUN go install github.com/Park-yeaseo/invoicer-chapter2@latest
 USER app
 EXPOSE 8080
 WORKDIR /app
-ENTRYPOINT /go/bin/invoicer
+ENTRYPOINT /go/bin/invoicer-chapter2
