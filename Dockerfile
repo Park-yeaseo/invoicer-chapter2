@@ -7,8 +7,10 @@ RUN adduser --gid 10001 --uid 10001 \
 RUN mkdir /app/statics/
 ADD statics /app/statics/
 
-COPY bin/invoicer /app/invoicer
+ADD . /go/src/github.com/Park-yeaseo/invoicer-chapter2
+RUN go install github.com/Park-yeaseo/invoicer-chapter2
+
 USER app
 EXPOSE 8080
 WORKDIR /app
-ENTRYPOINT /app/invoicer
+ENTRYPOINT /go/bin/invoicer-chapter2
