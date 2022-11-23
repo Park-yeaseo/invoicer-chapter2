@@ -57,6 +57,7 @@ func main() {
 	}
 	if err != nil {
 		panic("failed to connect database")
+		panic(os.Getenv("INVOICER_POSTGRES_PASSWORD"))
 	}
 
 	iv.db = db
