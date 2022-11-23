@@ -10,6 +10,8 @@ ADD statics /app/statics/
 ADD . /go/src/github.com/Park-yeaseo/invoicer-chapter2
 RUN go install github.com/Park-yeaseo/invoicer-chapter2@latest
 
+RUN cp /go/bin/invoicer-chapter2 /app/invoicer
+
 USER app
 EXPOSE 8080
 WORKDIR /app
